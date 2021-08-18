@@ -24,7 +24,7 @@ export default {
     }
   },
   methods: {
-    login: function (event) {
+    login: function () {
       this.$http
         .post("/api/users/login", {
           user: this.user,
@@ -37,6 +37,7 @@ export default {
           (err) => {
             // error 를 보여줌
             alert("Login failed! please check your id or password");
+            console.log(err);
           }
         )
         .catch((err) => {

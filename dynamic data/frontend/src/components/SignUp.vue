@@ -17,8 +17,9 @@
 </template>
 <script>
 export default {
- methods: {
-    signUp: function (event) {
+  methods: {
+    signUp: function() {
+      console.log('called');
       this.$http.post("/api/users/signUp", {
           user: this.user,
         })
@@ -31,7 +32,7 @@ export default {
             alert(res.data.message);
           }
         })
-        .catch(function (error) {
+        .catch(function () {
           alert("error");
         });
     }
