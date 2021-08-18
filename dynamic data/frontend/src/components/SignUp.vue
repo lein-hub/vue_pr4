@@ -12,15 +12,15 @@
       <label for="password">비밀번호</label>
       <input type="password" id="password" v-model="user.password" />
     </div>
-    <button :click="signUp">가입하기</button>
+    <button v-on:click="signUp">가입하기</button>
   </div>
 </template>
 <script>
 export default {
   methods: {
-    signUp: function() {
+    signUp() {
       console.log('called');
-      this.$http.post("/api/users/signUp", {
+      this.$http.post("/users/signUp", {
           user: this.user,
         })
         .then((res) => {

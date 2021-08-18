@@ -20,7 +20,7 @@ export default {
     }
   },
   created() {
-    this.$http.get("/api/users").then((response) => {
+    this.$http.get("/users").then((response) => {
       this.users = response.data;
     });
   }

@@ -26,7 +26,7 @@ export default {
   methods: {
     login: function () {
       this.$http
-        .post("/api/users/login", {
+        .post("/users/login", {
           user: this.user,
         })
         .then(
